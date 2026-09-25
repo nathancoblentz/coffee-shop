@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('employee_shift', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('shift_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('employee_id')->constrained()->cascadeOnDelete();
-            $table->unique(['shift_id', 'employee_id']);
-        });
+    Schema::create('employee_shift', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('shift_id')->constrained()->cascadeOnDelete();
+        $table->foreignId('employee_id')->constrained()->cascadeOnDelete();
+        $table->unique(['shift_id', 'employee_id']);
+    });
     }
 
     /**
