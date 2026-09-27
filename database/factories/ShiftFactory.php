@@ -17,8 +17,12 @@ class ShiftFactory extends Factory
      */
     public function definition(): array
     {
+        $start = fake()->numberBetween(6, 12);
+
         return [
-            //
+            'shift_date' => fake()->dateTimeBetween('now', '+2 weeks')->format('Y-m-d'),
+            'start_time' => sprintf('%02d:00', $start),
+            'end_time' => sprintf('%02d:00', $start + 8),
         ];
     }
 }

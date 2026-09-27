@@ -15,6 +15,9 @@ use Laravel\Fortify\PasskeyAuthenticatable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 
 /**
+ * Business rule: this account represents a staff user who must verify their email and may use
+ * passkeys and two-factor authentication to access protected operations.
+ *
  * @property int $id
  * @property string $name
  * @property string $email

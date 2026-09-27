@@ -16,11 +16,11 @@ class EmployeeFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-{
-    return [
-        'first_name' => fake()->firstName(),
-        'last_name' => fake()->lastName(),
-        'hire_date' => fake()->dateTimeBetween('-3 years', 'now'),
-    ];
-}
+    {
+        return [
+            'first_name' => fake()->firstName(),
+            'last_name' => fake()->lastName(),
+            'hire_date' => fake()->dateTimeBetween('-3 years', 'now'),
+        ];
+    }
 }
